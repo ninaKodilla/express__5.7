@@ -24,6 +24,7 @@ passport.use(new GoogleStrategy({
     clientSecret:config.GOOGLE_CLIENT_SECRET,
     callbackURL: config.CALLBACK_URL
 },
+
 function(accessToken, refreshToken, profile, cb) {
     googleProfile = {
         id: profile.id,
