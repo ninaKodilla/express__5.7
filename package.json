@@ -1,0 +1,20 @@
+{
+  "name": "express__5.7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/npupiec/express__5.7.git"
+  },
+  "author": "Nina Pupiec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npupiec/express__5.7/issues"
+  },
+  "homepage": "https://github.com/npupiec/express__5.7#readme"
+}
