@@ -24,7 +24,6 @@ passport.use(new GoogleStrategy({
     clientSecret:config.GOOGLE_CLIENT_SECRET,
     callbackURL: config.CALLBACK_URL
 },
-
 function(accessToken, refreshToken, profile, cb) {
     googleProfile = {
         id: profile.id,
@@ -52,6 +51,7 @@ app.get('/auth/google/callback',
     passport.authenticate('google', {
         successRedirect : '/logged',
         failureRedirect: '/'
-    }));
+    })
+);
 
-app.listen(3000);
+app.listen(3000); 
