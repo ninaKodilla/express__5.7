@@ -3,7 +3,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const config = require('./config');
 const app = express();
-const googleProfile = {};
+let googleProfile = {};
 
 app.set('view engine', 'pug');
 app.set('views', './views');
@@ -24,6 +24,7 @@ passport.use(new GoogleStrategy({
     clientSecret:config.GOOGLE_CLIENT_SECRET,
     callbackURL: config.CALLBACK_URL
 },
+
 function(accessToken, refreshToken, profile, cb) {
     googleProfile = {
         id: profile.id,
@@ -35,7 +36,7 @@ function(accessToken, refreshToken, profile, cb) {
 ));
 
 app.get('/', function(req, res){
-    res.render('login-page', { user: req.user });
+    res.render('index', { user: req.user });
 });
 
 app.get('/logged', function(req, res){
